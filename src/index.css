@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+  }
+  
+  body{
+    background-color: rgb(250, 248, 248);
+  }
+  
+  .todos{
+    background: rgba(251, 246, 246, 0.082);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(175, 173, 173);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+  }
+  
+  .heading{
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    /* text-align: center; */
+    padding: 18px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .addTodo{
+    text-align: center;
+    border: 2px solid rgb(214, 214, 214);
+    width : 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .addTodo input{
+    width: 100%;
+  }
+  
+  
+  /* CSS */
+  .button-59 {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 120px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-59:focus {
+    color: #171e29;
+  }
+  
+  .button-59:hover {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+  }
+  
+  .button-59:active {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+  }
+  
+  .plusBtn{
+    display:none;
+  }
+  
+  @media (min-width: 768px) {
+    .button-59 {
+      min-width: 180px;
+    }
+  
+  }
+  
+  
+  @media (max-width: 450px) {
+    .addBtn{
+      display: none;
+    }
+    .plusBtn{
+      display:block;
+      min-width: 40px;
+    }
+  }
+  
+  
+  
+  #container {
+    width: 100%;
+    font-family: Montserrat;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  #container .scroll {
+    /* background: #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    white-space: nowrap;
+    animation: loop 30s linear infinite;
+  }
+  .fade {
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    pointer-event: none;
+  }
+  @keyframes loop {
+    0% {transform: translateX(-0%);}
+    /* 50% {transform: translateX(-10%);} */
+    100% {transform: translateX(-25%);}
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: black;
+    font-size: 2rem;
+    padding: 0.7rem 1rem;
+    margin: 0rem 1rem;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+  }
